@@ -20,7 +20,7 @@ import {
   PlaceholderMedia,
   PlaceholderLine,
   Fade
-} from "rn-poaceholder";
+} from "rn-placeholder";
 
 const App = () => (
   <Placeholder
