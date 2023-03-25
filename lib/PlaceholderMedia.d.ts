@@ -5,5 +5,6 @@ export interface PlaceholderMediaProps extends ViewProps {
     isRound?: boolean;
     color?: string;
     style?: ViewProps["style"];
+    animationStyleProps?: ViewProps["style"];
 }
 export declare const PlaceholderMedia: React.FC<PlaceholderMediaProps>;

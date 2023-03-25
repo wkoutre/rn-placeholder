@@ -1,5 +1,5 @@
 import React from "react";
-import { Animated, StyleSheet, View, ViewProps } from "react-native";
+import { Animated, View, ViewProps } from "react-native";
 import { useAnimation } from "./animations/context";
 import { COLORS, SIZES } from "./tokens";
 
@@ -33,14 +33,9 @@ export const PlaceholderMedia: React.FC<PlaceholderMediaProps> = ({
   const animationStyle = useAnimation();
 
   return (
-    <View style={[computedStyles, style, styles.media]}>
+    <View style={[computedStyles, style]}>
       <Animated.View style={[animationStyle, animationStyleProps]} />
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  media: {
-    overflow: "hidden",
-  },
-});

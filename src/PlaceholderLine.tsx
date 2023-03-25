@@ -1,5 +1,5 @@
 import React from "react";
-import { Animated, StyleSheet, View, ViewProps } from "react-native";
+import { Animated, View, ViewProps } from "react-native";
 import { useAnimation } from "./animations/context";
 import { COLORS, SIZES } from "./tokens";
 
@@ -20,7 +20,7 @@ export const PlaceholderLine: React.FC<PlaceholderLineProps> = ({
   height = SIZES.normal,
   color = COLORS.primary,
   width = 100,
-  noMargin = false,
+  noMargin = true,
   style,
 }) => {
   const backgroundColor = color;
@@ -32,20 +32,14 @@ export const PlaceholderLine: React.FC<PlaceholderLineProps> = ({
     borderRadius,
     height,
     marginBottom,
-    width: `${width}%`,
+    width,
   };
 
   const animationStyle = useAnimation();
 
   return (
-    <View style={[computedStyle, style, styles.line]}>
+    <View style={[computedStyle, style]}>
       <Animated.View style={animationStyle} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  line: {
-    overflow: "hidden",
-  },
-});
