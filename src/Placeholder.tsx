@@ -5,20 +5,14 @@ import { Raw } from "./animations/Raw";
 export interface PlaceholderProps {
   /* An optional component that animates the placeholder */
   Animation?: React.ComponentType;
-  children: ViewProps['children'];
+  children: ViewProps["children"];
 }
 
 export const Placeholder: React.FC<PlaceholderProps> = ({
   children,
   Animation,
-  ...props
 }) => {
   const AnimationProvider = Animation || Raw;
 
-  return (
-    <AnimationProvider>
-        {children}
-    </AnimationProvider>
-  );
+  return <AnimationProvider>{children}</AnimationProvider>;
 };
-
