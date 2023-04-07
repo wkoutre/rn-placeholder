@@ -1,9 +1,9 @@
 import React from "react";
-import { ViewProps } from "react-native";
+import { ViewProps, ViewStyle } from "react-native";
 export interface PlaceholderLineProps extends ViewProps {
     height?: number;
     color?: string;
-    width?: number;
+    width?: ViewStyle["width"];
     noMargin?: boolean;
     style?: ViewProps["style"];
 }
